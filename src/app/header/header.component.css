@@ -1,0 +1,35 @@
+nav.AppLogo> img{
+  width: 30px;
+}
+nav.AppLogo{
+  background-color: skyblue;
+  
+  
+}
+.AppLogo ul{
+  float: right;
+  list-style-type: none;
+  margin: 5px 0px;
+}
+.AppLogo ul li{
+  display:inline-block;
+  padding: 5px;
+}
+.AppLogo li a{
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.task-list li{
+text-align: left;
+padding: 10px;
+}
+.task-list li button {
+  margin-left: 20px;
+  /* Space between text and remove button */
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

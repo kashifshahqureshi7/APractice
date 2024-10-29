@@ -1,0 +1,11 @@
+<h1>{{child}}</h1>
+<input type="text" #box>
+<button (click)="updatedataEvent.emit(box.value)">Update Data</button>
+<h1>{{title | uppercase}}</h1>
+<h1>{{title}}</h1>
+<h1>{{title | lowercase}}</h1>
+<h2>{{today | date}}</h2>
+
+<h2>{{users | json | uppercase }}</h2>
+<h2>{{20 | currency:"USD"}}</h2>
+<h3>{{"hello how are you" | slice:0:5 | uppercase}}</h3>

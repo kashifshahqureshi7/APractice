@@ -1,0 +1,7 @@
+.footer {
+  position: absolute;
+  width: 99%;
+  padding: 3px;
+  background-color: aqua;
+  color: white;
+}

@@ -1,0 +1,77 @@
+<h1>Hello Angular {{title}}</h1>
+<h1>{{data}}</h1>
+<h1>{{getdata()}}</h1>
+<h1>{{3+3}}</h1>
+<h1>{{title=="Practice"}}</h1>
+<app-user-list></app-user-list>
+
+
+<button (click)="getName('kashif'
+,'asif')">Click Me</button>
+<br><br>
+<button (click)="GetData('Hello')">Call Function</button>
+<br><br>
+<input type="text" #box (keyup)="GetData(box.value)" placeholder="event keyup"> <br>
+<input type="text" #box1 (keydown)="GetData(box1.value)" placeholder="event keydown"> <br>
+<input type="text" #box2 (blur)="GetData(box2.value)" placeholder="event blur"> <br>
+<h1 (mouseover)="GetData('over')">welcome</h1>
+
+
+<h1 (mouseleave)="GetData('Leave')">Kashif</h1>
+<input type="text" #Box3 placeholder="Enter Name" name="name">
+<button (click)="getvalue(Box3.value)">Click</button>
+<p>
+  box value is :{{displayval}}
+</p>
+<button (click)="counter('minus')">--</button>
+<p>
+  count:{{count}}
+</p>
+<button (click)="counter('add')">++</button><br>
+<input type="text" name="user-name" value={{name}} disabled={{disable}}><br>
+<input type="text" name="user-name" [value]=name [disabled]=disable><br>
+<h1 *ngIf="show==='yes'; then ifBlock else elseBlock"></h1>
+<ng-template #ifBlock>
+  <h1>IF Condition</h1>
+</ng-template>
+<ng-template #elseBlock>
+  <h1>Else Condition</h1>
+</ng-template>
+<h3 *ngFor="let Item of users">Name is: {{Item}}</h3>
+<h3 *ngFor="let Item of userdetail">Detail Is: {{Item.Name}}, {{Item.Email}}, {{Item.contact}}</h3>
+<ul *ngFor="let item of Userss">
+  <li>{{item.Name}}</li>
+  <li>{{item.Phone}}</li>
+  <li>socialaccount</li>
+  <ul *ngFor="let Account of item.socialaccount">
+    <li>{{Account}}</li>
+  </ul>
+</ul>
+<h1 [style.color]="colors" [style.backgroundolor]="BgColor">{{title}}</h1>
+<button (click)="UpdateColor()">Update Color</button>
+<app-header></app-header>
+<form #basicForm="ngForm" (ngSubmit)="SubmitData(basicForm.value)" >
+  <input type="text" ngModel  name="User" placeholder="Enter User Name"><br><br>
+  <input type="text" ngModel name="Email" placeholder="Enter User Email"><br><br>
+  <input type="text" ngModel name="Password" placeholder="Enter User Password"><br><br>
+  <button>Registor</button>
+</form>mponent.chilprop: number
+<ul>
+  <li>{{userdata.User}}</li>
+  <li>{{userdata.Email}}</li>
+  <li>{{userdata.Password}}</li>
+</ul>
+<app-child-component [child]="chilprop"></app-child-component>
+<button (click)="UpdateChild()" >Update</button>
+//send data child to parrent 
+<app-child-component (updatedataEvent)="updatedata($event)"></app-child-component>
+<h2>{{childdata}}</h2>
+<input type="text" [(ngModel)]="Name">
+<h1>{{Name}}</h1>
+<app-reactive-form-and-validators></app-reactive-form-and-validators>
+<div>
+  <ul>
+    <li *ngFor="let a of usersss">{{a.Name}}  :  {{a.Age}}  :  {{a.Email}}</li>
+  </ul>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,20 @@
+<nav class="AppLogo">
+  <img src="https://cdn.freebiesupply.com/logos/large/2x/angular-icon-1-logo-png-transparent.png" alt="App-logo">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Login</a></li>
+  </ul>
+</nav>
+<h1 *ngIf="display">Heading</h1>
+<button (click)="Toogle()">Toogle</button><br><br>
+<input type="text" placeholder="Enter New Task" #task><br><br>
+<button (click)="AddTask(task.value)">Add Task</button><br><br>
+<ul class="task-list" *ngFor="let item of list">
+  <li> {{item.name}} 
+    <button (click)="removetask(item.id)">Remove</button> 
+  </li>
+</ul>
+
+
+

@@ -1,0 +1,9 @@
+<p>reactive-form-and-validators works!</p>
+<form [formGroup]="LoginForm" (ngSubmit)="userlogin()">
+  <input type="text" placeholder="Enter Name" name="user" formControlName="user"><br>
+  <span style="color: red;" *ngIf="user && user.invalid && user.touched">this field is not valid</span>
+  <br>
+  <input type="text" placeholder="Enter Password" name="Password" formControlName="Password"><br>
+  <span style="color: red;" *ngIf="password && password.invalid && password.touched">this field is not valid</span><br>
+  <button [disabled]="LoginForm.invalid">Login</button>
+</form>
